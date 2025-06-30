@@ -236,7 +236,7 @@ if os.path.exists(assinatura_path):
     with col2:
         st.image(Image.open(assinatura_path), use_column_width=True)
         st.markdown("""
-            <div style='text-align:center; font-size:14px; color:gray; margin-top:4px;'>
+            <div style='text-align:center; font-size:14px; color:gray; margin-top:1px;'>
                 Desenvolvido por <strong>CGPI-Sagicad-MDS</strong><br>
                 Última atualização: <strong>junho/2025</strong>
             </div>
