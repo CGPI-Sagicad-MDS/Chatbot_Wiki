@@ -26,3 +26,5 @@ llama-index-embeddings-google==0.1.4
 llama-index-llms-langchain==0.1.1
 nltk>=3.8.1,<4.0.0
 
+mkdocs
+mkdocs-material
