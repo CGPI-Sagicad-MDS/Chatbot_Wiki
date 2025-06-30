@@ -224,10 +224,18 @@ if prompt1:
                 """, unsafe_allow_html=True)
 
 # === Rodapé com assinatura do MDS ===
-st.markdown("""
-    <div style='margin-top:50px; text-align:center;'>
-        <img src='ASSINATURAS_MDS_PRINCIPAL_HORIZONTAL.png' width='300'>
-    </div>
-""", unsafe_allow_html=True)
+from PIL import Image
+import os
+
+assinatura_path = "ASSINATURAS_MDS_PRINCIPAL_HORIZONTAL.png"
+
+if os.path.exists(assinatura_path):
+    st.markdown("<br><br>", unsafe_allow_html=True)
+    col1, col2, col3 = st.columns([1, 2, 1])
+    with col2:
+        st.image(Image.open(assinatura_path), use_column_width=True)
+else:
+    st.warning("Imagem de rodapé não encontrada.")
+
 
 
