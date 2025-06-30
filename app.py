@@ -2,6 +2,8 @@ from dotenv import load_dotenv
 import streamlit as st
 import os
 import time
+import base64
+
 
 # Langchain e integração
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
@@ -226,17 +228,20 @@ if prompt1:
 # === Rodapé com assinatura do MDS e autoria ===
 from PIL import Image
 import os
+import base64
 
 assinatura_path = "ASSINATURAS_MDS_PRINCIPAL_HORIZONTAL.png"
 
 if os.path.exists(assinatura_path):
+    with open(assinatura_path, "rb") as img_file:
+        encoded_img = base64.b64encode(img_file.read()).decode()
+
     st.markdown("<br><br>", unsafe_allow_html=True)
     
     st.markdown(
         f"""
         <div style='text-align: center;'>
-            <img src="data:image/png;base64,{base64.b64encode(open(assinatura_path, "rb").read()).decode()}" 
-                 style="max-width: 300px;"><br>
+            <img src="data:image/png;base64,{encoded_img}" style="max-width: 300px;"><br>
             <div style='font-size:14px; color:gray; margin-top:6px;'>
                 Desenvolvido por <strong>CGPI-Sagicad-MDS</strong><br>
                 Última atualização: <strong>junho/2025</strong>
@@ -245,6 +250,7 @@ if os.path.exists(assinatura_path):
         """,
         unsafe_allow_html=True
     )
+
 
 
 
