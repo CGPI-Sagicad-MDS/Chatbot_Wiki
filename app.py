@@ -241,7 +241,7 @@ if os.path.exists(assinatura_path):
     st.markdown(
         f"""
         <div style='text-align: center;'>
-            <img src="data:image/png;base64,{encoded_img}" style="max-width: 300px;"><br>
+            <img src="data:image/png;base64,{encoded_img}" style="width: 100%; max-width: 360px;"><br>
             <div style='font-size:14px; color:gray; margin-top:6px;'>
                 Desenvolvido por <strong>CGPI-Sagicad-MDS</strong><br>
                 Última atualização: <strong>junho/2025</strong>
