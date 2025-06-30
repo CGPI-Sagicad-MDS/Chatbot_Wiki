@@ -190,13 +190,13 @@ prompt1 = st.text_area(
 
 # === Botão de carregamento ===
 if st.button("Carregar base do chat"):
-    with st.spinner("Carregando base de conhecimento..."):
+    with st.spinner("Carregando base de conhecimento. Aguarde. Na primeira consulta pode demorar um pouco mais."):
         vector_embedding()
 
 # === Execução do chat ===
 if prompt1:
     if "vectors" not in st.session_state:
-        st.warning("⚠️ Clique em 'Carregar base do chat' antes de perguntar.")
+        st.warning("⚠️ Clique em 'Carregar base do chat' após escrever a sua pergunta.")
     else:
         document_chain = create_stuff_documents_chain(llm, prompt)
         retriever = st.session_state.vectors.as_retriever()
