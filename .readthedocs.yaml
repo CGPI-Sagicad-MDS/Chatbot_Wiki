@@ -5,8 +5,5 @@ build:
   tools:
     python: "3.10"
 
-sphinx:
-  configuration: false
-
 mkdocs:
   configuration: mkdocs.yml
