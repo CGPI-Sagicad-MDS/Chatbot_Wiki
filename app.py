@@ -223,5 +223,11 @@ if prompt1:
                     </div>
                 """, unsafe_allow_html=True)
 
-        
+# === Rodapé com assinatura do MDS ===
+st.markdown("""
+    <div style='margin-top:50px; text-align:center;'>
+        <img src='ASSINATURAS_MDS_PRINCIPAL_HORIZONTAL.png' width='300'>
+    </div>
+""", unsafe_allow_html=True)
+
 
