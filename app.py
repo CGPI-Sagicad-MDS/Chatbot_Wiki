@@ -71,13 +71,17 @@ st.caption("Tire dúvidas sobre como documentar os programas e respectivos indic
 
 # === Cabeçalho ===
 st.markdown("""
-    <div style='padding:10px; border-left:3px solid #a71d2a; margin-bottom:20px;'>
+    <div style='padding:10px; border-left:3px solid #a71d2a; margin-bottom:20px; font-size:15px;'>
         <strong style='color:#a71d2a; font-size:18px;'>Atenção!</strong><br><br>
         As respostas deste chatbot usam como referência o conteúdo oficial produzido pelo Departamento de Monitoramento e Avaliação (DMA/Sagicad) para orientar os pontos focais com perfil de edição. 
         É importante revisar as respostas obtidas de modo a incluir o seu conhecimento pessoal a respeito do programa para que a documentação seja a mais correta e completa possível.<br><br>
-        No caso de dificuldade para acessar a [Documenta Wiki](mds.gov.br/documenta-wiki) mande um email para [wiki@mds.gov.br](mailto:wiki@mds.gov.br)
+        No caso de dificuldade para acessar a 
+        <a href="https://mds.gov.br/documenta-wiki" target="_blank">Documenta Wiki</a>, 
+        mande um email para 
+        <a href="mailto:wiki@mds.gov.br">wiki@mds.gov.br</a>.
     </div>
 """, unsafe_allow_html=True)
+
 
 # === LLM ===
 llm = ChatGroq(groq_api_key=groq_api_key, model_name="llama-3.1-8b-instant")
