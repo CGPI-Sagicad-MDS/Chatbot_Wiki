@@ -223,16 +223,27 @@ if prompt1:
                     </div>
                 """, unsafe_allow_html=True)
 
-# === Rodapé com assinatura, autoria e data ===
-st.markdown("""
-    <div style='margin-top:50px; text-align:center;'>
-        <img src='ASSINATURAS_MDS_PRINCIPAL_HORIZONTAL.png' width='300'><br>
-        <div style='font-size:14px; color:gray; margin-top:10px;'>
-            Desenvolvido por <strong>CGPI-Sagicad-MDS</strong><br>
-            Última atualização: <strong>junho/2025</strong>
-        </div>
-    </div>
-""", unsafe_allow_html=True)
+# === Rodapé com assinatura do MDS e autoria ===
+from PIL import Image
+import os
+
+assinatura_path = "ASSINATURAS_MDS_PRINCIPAL_HORIZONTAL.png"
+
+if os.path.exists(assinatura_path):
+    st.markdown("<br><br>", unsafe_allow_html=True)
+    
+    col1, col2, col3 = st.columns([1, 2, 1])
+    with col2:
+        st.image(Image.open(assinatura_path), use_column_width=True)
+        st.markdown("""
+            <div style='text-align:center; font-size:14px; color:gray; margin-top:10px;'>
+                Desenvolvido por <strong>DMA/Sagicad/MDS</strong><br>
+                Última atualização: <strong>junho/2025</strong>
+            </div>
+        """, unsafe_allow_html=True)
+else:
+    st.warning("Imagem de rodapé não encontrada.")
+
 
 
 
