@@ -65,7 +65,7 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-st.image("wiki.png", width=220)
+st.image("wiki.png", width=280)
 st.title("Chat Documenta Wiki")
 st.caption("Tire dúvidas sobre como documentar os programas e respectivos indicadores na ferramenta de metadados oficial do MDS")
 
@@ -234,7 +234,7 @@ if os.path.exists(assinatura_path):
     
     col1, col2, col3 = st.columns([1, 2, 1])
     with col2:
-        st.image(Image.open(assinatura_path), use_column_width=True)
+        st.image(Image.open(assinatura_path), width=240)
         st.markdown("""
             <div style='text-align:center; font-size:14px; color:gray; margin-top:1px;'>
                 Desenvolvido por <strong>CGPI-Sagicad-MDS</strong><br>
