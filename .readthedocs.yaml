@@ -5,12 +5,6 @@ build:
   tools:
     python: "3.10"
 
-sphinx:
-  configuration: false
-
+# Use mkdocs para construir a documentação
 mkdocs:
   configuration: mkdocs.yml
-
-python:
-  install:
-    - requirements: requirements.txt
