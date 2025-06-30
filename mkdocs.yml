@@ -1,7 +1,10 @@
 site_name: Documentação do Documenta-Wiki-Chatbot
 repo_url: https://github.com/CGPI-Sagicad-MDS/Chatbot_Wiki
+
 nav:
   - Início: index.md
 
 theme:
   name: material
+
+docs_dir: docs
