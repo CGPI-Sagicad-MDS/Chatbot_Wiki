@@ -5,6 +5,8 @@ build:
   tools:
     python: "3.10"
 
-# Use mkdocs para construir a documentação
+sphinx:
+  configuration: false
+
 mkdocs:
   configuration: mkdocs.yml
