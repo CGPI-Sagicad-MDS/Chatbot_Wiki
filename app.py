@@ -223,13 +223,17 @@ if prompt1:
                     </div>
                 """, unsafe_allow_html=True)
 
-# === Rodapé com autoria e data ===
+# === Rodapé com assinatura, autoria e data ===
 st.markdown("""
-    <div style='text-align:center; font-size:14px; color:gray; margin-top:10px;'>
-        Desenvolvido por <strong>CGPI-Sagicad-MDS</strong><br>
-        Última atualização: <strong>junho/2025</strong>
+    <div style='margin-top:50px; text-align:center;'>
+        <img src='ASSINATURAS_MDS_PRINCIPAL_HORIZONTAL.png' width='300'><br>
+        <div style='font-size:14px; color:gray; margin-top:10px;'>
+            Desenvolvido por <strong>CGPI-Sagicad-MDS</strong><br>
+            Última atualização: <strong>junho/2025</strong>
+        </div>
     </div>
 """, unsafe_allow_html=True)
+
 
 
 
