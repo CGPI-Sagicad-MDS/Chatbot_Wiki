@@ -207,7 +207,6 @@ if prompt1:
             response = retrieval_chain.invoke({"input": prompt1})
             elapsed = time.process_time() - start
 
-        st.image("wiki.png", width=120)
         st.markdown(f"<div class='chat-box'>{response['answer']}</div>", unsafe_allow_html=True)
         st.caption(f"⏱️ Tempo de resposta: {elapsed:.2f} segundos")
 
