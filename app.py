@@ -196,7 +196,7 @@ prompt1 = st.text_area(
 
 
 # === Botão de carregamento ===
-if st.button("Carregar base do chat"):
+if st.button("Gerar resposta"):
     with st.spinner("Carregando base de conhecimento. Aguarde. Na primeira consulta pode demorar um pouco mais."):
         vector_embedding()
 
